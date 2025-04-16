@@ -4,6 +4,13 @@
   syntax: "<color>";
 }
 
+@layer base {
+  body {
+    background-color: #101010;
+    color: white;
+  }
+}
+
 @property --font {
   initial-value: 20px;
   inherits: false;
