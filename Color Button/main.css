@@ -99,6 +99,66 @@ main {
   }
 }
 
+@media screen and (max-width: 501px) {
+  button {
+    display: flex;
+    width: 70vw;
+  }
+
+  .container {
+    display: grid;
+  }
+
+  button:is(:hover) {
+    background-color: var(--bgTwo);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  button {
+    display: flex;
+    width: 70vw;
+  }
+
+  .container {
+    display: grid;
+  }
+
+  button:is(:hover) {
+    background-color: var(--bgTwo);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  button {
+    display: flex;
+    width: 70vw;
+  }
+
+  .container {
+    display: grid;
+  }
+
+  button:is(:hover) {
+    background-color: var(--bgTwo);
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  button {
+    display: flex;
+    width: 70vw;
+  }
+
+  .container {
+    display: grid;
+  }
+
+  button:is(:hover) {
+    background-color: var(--bgTwo);
+  }
+}
+
 #pTag {
   padding: 10px;
   background-color: #101010;
