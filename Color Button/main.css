@@ -1,3 +1,28 @@
+@property --color {
+  initial-value: #fff;
+  inherits: false;
+  syntax: "<color>";
+}
+
+@property --font {
+  initial-value: 20px;
+  inherits: false;
+  syntax: "<font-size>";
+}
+
+@property --fsize {
+  syntax: "<font-size>";
+  initial-value: 20px;
+  inherits: false;
+}
+
+:root {
+  --margin: 22px;
+  --bgOne: #131313;
+  --radius: 10px;
+  --bgTwo: #202020;
+}
+
 body {
   padding: 0;
   box-sizing: border-box;
@@ -18,19 +43,27 @@ div {
 }
 
 button {
-  padding: 9px;
-  width: 70px;
+  padding: 10px;
+  width: 120px;
   border: none;
-  background-color: red;
+  background-color: var(--bgOne);
+  color: var(--color);
+  border-radius: var(--radius);
   margin-top: 120px;
 }
 
-button:nth-child(2) {
-  background-color: blue;
+button::placeholder {
+  font-size: var(--fsize);
+}
+
+button:nth-child(2):is(:hover) {
+  background-color: var(--bgOne);
+  color: var(--color);
 }
 
 button:nth-child(3) {
-  background-color: green;
+  background-color: var(--bgOne);
+  color: var(--color);
 }
 
 * {
@@ -39,14 +72,31 @@ button:nth-child(3) {
   box-sizing: border-box;
 }
 
-main > h2 {
-  font-size: 20px;
-  padding: 10px;
+main {
+  & h2 {
+    padding: var(--margin);
+    background-color: #232323;
+    content-visibility: auto;
+    contain-intrinsic-size: auto 500px;
+    color: var(--color);
+    font-size: var(--font);
+    text-transform: uppercase;
+  }
 }
 
-main {
-  padding: 10px;
-  background-color: #232323;
+@media screen and (max-width: 500px) {
+  button {
+    display: flex;
+    width: 70vw;
+  }
+
+  .container {
+    display: grid;
+  }
+
+  button:is(:hover) {
+    background-color: var(--bgTwo);
+  }
 }
 
 #pTag {

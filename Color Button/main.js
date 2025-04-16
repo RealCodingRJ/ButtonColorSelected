@@ -11,17 +11,19 @@ const randomColor = randomColorPicked(colors);
 
 button1.addEventListener("click", () => {
   if (randomColor == "RED") {
-    alert("Correct!");
+    button1.textContent = "Correct";
+    button1.style.backgroundColor = "red";
   }
 });
 button2.addEventListener("click", () => {
   if (randomColor == "BLUE") {
-    alert("Correct!");
+    button2.textContent = "Correct";
+    button2.style.backgroundColor = "blue";
   }
 });
 button3.addEventListener("click", () => {
   if (randomColor == "GREEN") {
-    // button3.textContent = "Correct!";
-    alert("Correct!");
+    button3.textContent = "Correct";
+    button3.style.backgroundColor = "green";
   }
 });
